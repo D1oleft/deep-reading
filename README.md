@@ -1,76 +1,74 @@
-# Deep Reading Skill v2.0
+# Deep Reading Skill v3.0
 
-7步吃透一本书的 Claude Code Skill。
+一键吃透一本书的 Claude Code Skill。
+
+## 核心特性
+
+- **一键读书**：发内容，自动走完全流程
+- **智能跳读**：自动区分骨架章和水章
+- **三种输出**：极简/标准/研究，自动切换
+- **进度追踪**：中途退出可恢复
+- **极简交互**：全程只需确认 2 次
 
 ## 安装
 
 ```bash
-# 方法1：复制到全局目录（所有项目可用）
-cp -r deep-reading/.claude/skills/deep-reading/ ~/.claude/skills/deep-reading/
-
-# 方法2：复制到项目目录
-cp -r deep-reading/.claude/skills/deep-reading/ your-project/.claude/skills/deep-reading/
+# 复制到全局目录
+cp -r .claude/skills/deep-reading/ ~/.claude/skills/deep-reading/
 ```
 
 ## 使用
 
 ```bash
-# 全局扫描
-/book-scan 《思考，快与慢》
+# 一键读书（推荐）
+/read 《思考，快与慢》
 
-# 逐章拆解
-/book-chapter 第3章：惰性思维与冲动
+# 或者自然语言
+"帮我读这本书"
+"拆解一下这本书"
 
-# 苏格拉底质询
-/book-quiz 《思考，快与慢》第3章
-
-# 费曼输出
-/book-feynman 系统1和系统2
-
-# 批判性审视
-/book-critique 《思考，快与慢》
-
-# 知识卡片
-/book-card 《思考，快与慢》
-
-# 跨书连接
-/book-cross 《思考，快与慢》《穷查理宝典》《噪声》
+# 单步命令
+/book-scan    # 全局扫描
+/book-skip    # 跳读标记
+/book-chapter # 章节拆解
+/book-quiz    # 质询检验
+/book-feynman # 费曼输出
+/book-critique # 批判审视
+/book-card    # 知识卡片
+/book-cross   # 跨书连接
+/book-progress # 查看进度
 ```
 
 ## 文件结构
 
 ```
 deep-reading/
-├── SKILL.md                    # 主入口（必需）
+├── SKILL.md                    # 主入口
 ├── README.md                   # 本文件
-├── reading-plans.md            # 三档阅读计划详情
-├── templates.md                # 各命令输出模板参考
+├── flow.md                     # 流程详解
+├── output-modes.md             # 输出模式说明
+├── progress.md                 # 进度追踪说明
 └── commands/
+    ├── read.md                 # 一键读书
     ├── book-scan.md            # 全局扫描
-    ├── book-chapter.md         # 逐章拆解
-    ├── book-quiz.md            # 苏格拉底质询
+    ├── book-skip.md            # 跳读标记
+    ├── book-chapter.md         # 章节拆解
+    ├── book-quiz.md            # 质询检验
     ├── book-feynman.md         # 费曼输出
-    ├── book-critique.md        # 批判性审视
+    ├── book-critique.md        # 批判审视
     ├── book-card.md            # 知识卡片
-    └── book-cross.md           # 跨书连接
+    ├── book-cross.md           # 跨书连接
+    └── book-progress.md        # 进度查看
 ```
 
-## v2.0 改进
+## v3.0 改进
 
-- 适配 Claude Code 官方 skill 格式（SKILL.md + frontmatter）
-- 每个命令增加前置检查和边界情况处理
-- 丰富输出模板和格式规范
-- 增加质量自检机制
-- 参考 Superpowers（229k⭐）的最佳实践
-- 增加支持文件（阅读计划、输出模板）
-
-## 设计原则
-
-1. **原文锚定**：每个判断必须引用原文
-2. **主动检验**：用苏格拉底质询反向检验
-3. **输出倒逼**：能用自己的话讲明白才算理解
-4. **批判思维**：每本书都要找到弱点
-5. **知识复利**：读完的书要产生连接
+- 一键读书模式，全自动流程
+- 智能跳读，自动标记骨架/证据/延伸章节
+- 三种输出模式（极简/标准/研究）自动切换
+- 进度追踪，中途退出可恢复
+- 极简交互，全程只需确认 2 次
+- 微信场景优化，极简模式 3-5 行输出
 
 ## License
 
