@@ -9,6 +9,7 @@
   <a href="https://github.com/D1oleft/deep-reading/issues"><img src="https://img.shields.io/github/issues/D1oleft/deep-reading" alt="Issues"></a>
   <a href="https://github.com/D1oleft/deep-reading/blob/main/LICENSE"><img src="https://img.shields.io/github/license/D1oleft/deep-reading" alt="License"></a>
   <img src="https://img.shields.io/badge/Claude%20Code-Skill-blue" alt="Claude Code Skill">
+  <img src="https://img.shields.io/badge/Version-4.0.0-green" alt="Version">
 </p>
 
 ---
@@ -17,7 +18,7 @@
 
 一个 Claude Code / MiMo Code 的 Skill，让你用 AI 高效阅读书籍。
 
-**核心能力**：发一本书的内容 → 自动扫描 → 智能跳读 → 拆解核心章节 → 生成知识卡片
+**核心能力**：发一本书的内容 → 自动扫描 → 智能跳读 → 拆解核心章节 → 生成知识卡片 → 导出笔记 → 定期复盘
 
 ## ⚡ 效果对比
 
@@ -25,9 +26,10 @@
 |---|---|---|
 | 读完一本 300 页的书 | 6-8 小时 | 30 分钟 |
 | 理解深度 | 看过 ≠ 理解 | 苏格拉底质询检验 |
-| 知识留存 | 1 周后忘 80% | 知识卡片随时复习 |
+| 知识留存 | 1 周后忘 80% | 知识卡片 + 定期复盘 |
 | 跨书连接 | 手动整理 | 自动求同存异 |
 | 输出 | 无 | 结构化笔记 + 行动清单 |
+| 笔记管理 | 散落各处 | 自动导出到文件 |
 
 ## 🚀 快速开始
 
@@ -63,14 +65,16 @@ curl -o .claude/skills/deep-reading/SKILL.md https://raw.githubusercontent.com/D
 /book-card     # 知识卡片
 /book-cross    # 跨书连接
 /book-progress # 查看进度
+/book-export   # 导出笔记
+/book-review   # 定期复盘
 ```
 
 ## 📖 工作流程
 
 ```
-发书 → 扫描 → 跳读标记 → 拆核心章 → 出卡片 → 完成
-         ↓         ↓           ↓         ↓
-      10秒     自动标记    每章10秒    自动生成
+发书 → 扫描 → 跳读标记 → 拆核心章 → 出卡片 → 导出笔记 → 完成
+         ↓         ↓           ↓         ↓         ↓
+      10秒     自动标记    每章10秒    自动生成    自动保存
 ```
 
 **极简交互**：全程只需确认 2 次（扫描后 + 每章后）
@@ -125,6 +129,9 @@ curl -o .claude/skills/deep-reading/SKILL.md https://raw.githubusercontent.com/D
 - ✅ **苏格拉底检验**：主动检验理解程度
 - ✅ **费曼输出**：用自己的话讲明白才算懂
 - ✅ **跨书连接**：多本书求同存异
+- ✅ **笔记导出**：自动保存到文件
+- ✅ **定期复盘**：读完一周后自动复盘
+- ✅ **阅读目的**：根据目的调整分析重点
 
 ## 📁 文件结构
 
@@ -135,6 +142,8 @@ deep-reading/
 ├── flow.md                     # 流程详解
 ├── output-modes.md             # 输出模式说明
 ├── progress.md                 # 进度追踪说明
+├── export.md                   # 笔记导出说明
+├── review.md                   # 复盘机制说明
 ├── reading-plans.md            # 三档阅读计划
 ├── templates.md                # 输出模板参考
 └── commands/
@@ -147,7 +156,9 @@ deep-reading/
     ├── book-critique.md        # 批判审视
     ├── book-card.md            # 知识卡片
     ├── book-cross.md           # 跨书连接
-    └── book-progress.md        # 进度查看
+    ├── book-progress.md        # 进度查看
+    ├── book-export.md          # 笔记导出
+    └── book-review.md          # 定期复盘
 ```
 
 ## 🤝 支持的工具
@@ -166,6 +177,8 @@ deep-reading/
 | 输出 | 一次性的 | 知识卡片可复用 |
 | 进度 | 没有 | 中途可退出恢复 |
 | 跳读 | 不会 | 自动标记骨架/水章 |
+| 笔记 | 散落对话里 | 自动导出到文件 |
+| 复盘 | 没有 | 定期复盘检验记忆 |
 
 ## 📜 License
 
