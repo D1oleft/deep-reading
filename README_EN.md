@@ -1,116 +1,296 @@
-# 📚 Deep Reading
+<div align="center">
 
-<p align="center">
-  <strong>Read and truly understand any book with AI — a Claude Code Skill</strong>
-</p>
+# 📚 Deep Reading Skill
 
-<p align="center">
-  <a href="https://github.com/D1oleft/deep-reading/stargazers"><img src="https://img.shields.io/github/stars/D1oleft/deep-reading?style=social" alt="Stars"></a>
-  <a href="https://github.com/D1oleft/deep-reading/issues"><img src="https://img.shields.io/github/issues/D1oleft/deep-reading" alt="Issues"></a>
-  <a href="https://github.com/D1oleft/deep-reading/blob/main/LICENSE"><img src="https://img.shields.io/github/license/D1oleft/deep-reading" alt="License"></a>
-  <img src="https://img.shields.io/badge/Claude%20Code-Skill-blue" alt="Claude Code Skill">
-  <img src="https://img.shields.io/badge/Version-4.0.0-green" alt="Version">
-</p>
+**AI-Powered Deep Reading System · Master Books, Don't Just Read Them**
 
-<p align="center">
-  <a href="README.md">中文文档</a> | English
-</p>
+![Version](https://img.shields.io/badge/version-4.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Claude%20Code-purple)
+![Stars](https://img.shields.io/github/stars/D1oleft/deep-reading?style=social)
+
+English | [中文](README.md)
+
+</div>
 
 ---
 
-## What is this?
+## 🎯 One-Line Pitch
 
-A Claude Code / MiMo Code Skill that helps you read books efficiently with AI.
+> **Other tools are "reading assistants" — they compress books for you**
+> **We are a "learning system" — we help you master them**
 
-**Core ability**: Send book content → Auto scan → Smart skimming → Analyze key chapters → Generate knowledge cards → Export notes → Periodic review
+<div align="center">
 
-## Quick Comparison
+```
+📖 Input a book
+    ↓
+🔍 Smart Scan → Find core chapters
+    ↓
+📝 Chapter Breakdown → Extract key points
+    ↓
+🃏 Generate Cards → Easy review
+    ↓
+📊 Quiz Test → Verify understanding
+    ↓
+🎯 Feynman Output → Can you explain it?
+    ↓
+🔄 Periodic Review → True internalization
+```
 
-| | Regular Reading | With Deep Reading |
-|---|---|---|
-| Read a 300-page book | 6-8 hours | 30 minutes |
-| Understanding depth | Read ≠ Understand | Socratic quiz verification |
-| Knowledge retention | Forget 80% in 1 week | Knowledge cards + periodic review |
-| Cross-book connections | Manual | Automatic |
-| Output | Nothing | Structured notes + action items |
-| Note management | Scattered | Auto export to file |
+</div>
 
-## Quick Start
+---
 
-### Install
+## ✨ Core Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 📖 Deep Breakdown
+- Identify core chapters, skip fluff
+- Extract 3-5 key points per chapter
+- Preserve original wisdom
+
+</td>
+<td width="50%">
+
+### 🃏 Knowledge Cards
+- Auto-generate Anki-friendly cards
+- Spaced repetition for memory
+- Export to CSV format
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Quiz Testing
+- 3-5 comprehension questions
+- Tests understanding, not memorization
+- Immediate feedback
+
+</td>
+<td width="50%">
+
+### 🎯 Feynman Output
+- Explain in simple terms
+- Verify true understanding
+- "If you can't explain it simply, you don't understand it"
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📝 Note Export
+- One-click export to `~/笔记/`
+- Markdown format, universal
+- Batch export supported
+
+</td>
+<td width="50%">
+
+### 🔄 Periodic Review
+- 1-day quick recall
+- 1-week deep review (scored)
+- 1-month application
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+### Install (30 seconds)
 
 ```bash
+cd ~/.claude/skills
 git clone https://github.com/D1oleft/deep-reading.git
-cp -r deep-reading/.claude/skills/deep-reading/ ~/.claude/skills/deep-reading/
 ```
 
-### Use
+### Usage
 
+```bash
+# Method 1: Send content directly
+"Help me read this book: [paste content]"
+
+# Method 2: Use commands
+/deep-reading:read
+
+# Check progress
+/deep-reading:book-progress
+
+# Export notes
+/deep-reading:book-export
+
+# Periodic review
+/deep-reading:book-review
+
+# Cross-book comparison
+/deep-reading:book-cross
 ```
-# One-click reading (recommended)
-/read "Thinking, Fast and Slow"
-
-# Or natural language
-"Help me read this book"
-
-# Individual commands
-/book-scan     # Full scan
-/book-skip     # Smart skimming marks
-/book-chapter  # Chapter analysis
-/book-quiz     # Socratic quiz
-/book-feynman  # Feynman technique
-/book-critique # Critical review
-/book-card     # Knowledge card
-/book-cross    # Cross-book analysis
-/book-progress # Check progress
-/book-export   # Export notes
-/book-review   # Periodic review
-```
-
-## Workflow
-
-```
-Send book → Scan → Mark chapters → Analyze key ones → Card → Export → Done
-              ↓         ↓              ↓              ↓         ↓
-           10sec    Auto mark      10sec/chap      Auto gen   Auto save
-```
-
-Only 2 confirmations needed throughout the entire process.
-
-## Three Reading Plans
-
-| Mode | Time | Flow | Use Case |
-|------|------|------|----------|
-| ⚡ Speed | 30 min | Scan → Card | Decide if worth reading |
-| 📖 Deep | 2 hours | Scan → Analyze core → Quiz → Card | Truly understand a book |
-| 🔬 Research | Unlimited | All 7 steps | Academic research / book review |
-
-## Features
-
-- ✅ One-click reading — send content, auto-complete
-- ✅ Smart skimming — auto-detect key vs filler chapters
-- ✅ Three output modes — minimal / standard / research
-- ✅ Progress tracking — resume where you left off
-- ✅ Source-grounded — every claim references original text
-- ✅ Socratic verification — actively test understanding
-- ✅ Feynman technique — explain in your own words
-- ✅ Cross-book synthesis — find patterns across books
-- ✅ Note export — auto save to file
-- ✅ Periodic review — auto review after one week
-- ✅ Reading purpose — adjust analysis focus based on purpose
-
-## Supported Tools
-
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
-- [MiMo Code](https://mimo.xiaomi.com/mimocode)
-- Any AI tool supporting Agent Skills standard
-
-## License
-
-MIT
 
 ---
 
-<p align="center">
-  If this project helped you, please give it a ⭐ Star!
-</p>
+## 📊 Complete Workflow
+
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    📚 Deep Reading Flow                     │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐              │
+│  │ Step 0   │───→│ Step 1   │───→│ Step 2   │              │
+│  │ Get      │    │ Quick    │    │ Skim     │              │
+│  │ Content  │    │ Scan     │    │ Confirm  │              │
+│  └──────────┘    └──────────┘    └──────────┘              │
+│                                       │                     │
+│                                       ▼                     │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐              │
+│  │ Step 5   │←───│ Step 4   │←───│ Step 3   │              │
+│  │ Export   │    │ Generate │    │ Chapter  │              │
+│  │ Notes    │    │ Cards    │    │ Breakdown│              │
+│  └──────────┘    └──────────┘    └──────────┘              │
+│       │                                                     │
+│       ▼                                                     │
+│  ┌──────────┐    ┌──────────┐                              │
+│  │ Done!    │───→│ Periodic │                              │
+│  │          │    │ Review   │                              │
+│  └──────────┘    └──────────┘                              │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+---
+
+## ⏱️ Time Estimates
+
+| Book Size | Time | Example |
+|-----------|------|---------|
+| 📄 Small (<50 pages) | 3 min | Blog posts, reports |
+| 📕 Medium (50-200 pages) | 7 min | Regular books |
+| 📚 Large (200+ pages) | 12 min | Classic works |
+
+---
+
+## 🆚 Why Choose Us?
+
+| Feature | Deep Reading | Others |
+|---------|-------------|--------|
+| Learning Loop | ✅ Read→Test→Review→Apply | ❌ Analysis only |
+| Zero Dependencies | ✅ Pure Markdown | ❌ Requires Python/Node |
+| Chinese Optimized | ✅ Native Chinese | ⚠️ Generic |
+| Knowledge Cards | ✅ Anki Compatible | ❌ None |
+| Periodic Review | ✅ Scored Tracking | ❌ None |
+| Feynman Test | ✅ Explain = Understand | ❌ None |
+
+---
+
+## 💡 Use Cases
+
+### 📖 Reading Classic Works
+```
+"Help me read 'The Prince', I want to truly understand it"
+→ Auto-identifies 177 teachings
+→ Chapter-by-chapter breakdown
+→ Quiz to test understanding
+→ Feynman output to verify mastery
+```
+
+### 📄 Analyzing Long Reports
+```
+"This 30,000-word industry report, help me extract key points"
+→ Quick scan for core data
+→ Generate key point cards
+→ Export notes for review
+```
+
+### 🎓 Learning专业知识
+```
+"This textbook is too thick, help me learn efficiently"
+→ Skip known content
+→ Focus on core difficulties
+→ Quiz to test learning效果
+```
+
+---
+
+## 📁 Output Example
+
+### Generated Note Structure
+```
+~/笔记/
+└── The_Prince_Reading_Notes.md
+    ├── 📖 Book Info
+    ├── 🎯 Key Points (by chapter)
+    ├── 🃏 Knowledge Cards (Anki-compatible)
+    ├── 📊 Quiz Questions & Answers
+    └── 💭 Personal Reflections
+```
+
+### Quiz Example
+```
+Q1: According to Machiavelli, should a prince be loved or feared?
+A. Can only choose one, choose fear
+B. Best to have both, but if must choose, choose fear
+C. Love is more important than fear
+D. Fear is better than love, but must avoid being hated
+
+Answer: D
+Analysis: Chapter 17 core idea - love and fear can coexist, 
+the key is avoiding hatred.
+```
+
+---
+
+## 🔧 Commands
+
+| Command | Function |
+|---------|----------|
+| `/deep-reading:read` | Start reading |
+| `/deep-reading:book-progress` | Check progress |
+| `/deep-reading:book-export` | Export notes |
+| `/deep-reading:book-review` | Periodic review |
+| `/deep-reading:book-cross` | Cross-book comparison |
+
+---
+
+## 🌟 User Feedback
+
+> "I used to forget what I read. With quizzes and reviews, I actually remember now."
+> — User Feedback
+
+> "The Feynman output is so useful. If you can explain it clearly, you truly understand it."
+> — Learner
+
+---
+
+## 📈 Project Status
+
+- ⭐ If you find it useful, please give a Star!
+- 🐛 Found an issue? Open an Issue
+- 💡 Have suggestions? Welcome PRs
+
+---
+
+## 📜 License
+
+MIT License - Free to use, free to modify
+
+---
+
+<div align="center">
+
+**📚 Reading isn't hard. Mastering is.**
+
+[Quick Start](#quick-start) · [View Docs](flow.md) · [中文](README.md)
+
+</div>
