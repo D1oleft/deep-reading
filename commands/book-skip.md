@@ -1,6 +1,7 @@
 ---
 description: 智能跳读标记。根据扫描结果标记哪些章节必读、可略、可跳。
 argument-hint: "[书名]"
+allowed-tools: Read
 ---
 
 # 智能跳读标记

@@ -1,6 +1,7 @@
 ---
 description: 跨书连接。多本书求同存异，综合分析。
 argument-hint: "[书名1] [书名2] [书名3...]"
+allowed-tools: Read
 ---
 
 # 跨书连接

@@ -1,6 +1,7 @@
 ---
 description: 费曼输出检验。用自己的话解释，AI检验是否正确。
 argument-hint: "[要检验的概念]"
+allowed-tools: Read
 ---
 
 # 费曼输出

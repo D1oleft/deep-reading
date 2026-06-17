@@ -1,6 +1,7 @@
 ---
 description: 苏格拉底质询。5个问题检验理解程度。
 argument-hint: "[书名和章节]"
+allowed-tools: Read
 ---
 
 # 苏格拉底质询

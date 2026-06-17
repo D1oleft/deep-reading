@@ -1,6 +1,7 @@
 ---
 description: 查看阅读进度。显示当前书籍的分析完成情况。
 argument-hint: "[书名]"
+allowed-tools: Read
 ---
 
 # 阅读进度

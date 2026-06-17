@@ -1,6 +1,7 @@
 ---
 description: 批判性审视。找书的逻辑漏洞和弱点。
 argument-hint: "[书名]"
+allowed-tools: Read
 ---
 
 # 批判性审视

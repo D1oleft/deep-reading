@@ -1,6 +1,7 @@
 ---
 description: 知识卡片。把书压缩成一张可复用的知识卡片。
 argument-hint: "[书名]"
+allowed-tools: Read
 ---
 
 # 知识卡片
